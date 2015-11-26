@@ -3,7 +3,7 @@ const PORT = config.get('PORT');
 const IP = config.get('IP');
 
 const http = require('http').createServer().listen(PORT, IP);
-const io = require('socket.io').attach(http);
+const io = require('socket.io')(http);
 
 io.origins('*:*');
 
