@@ -7,6 +7,7 @@ const io = require('socket.io').attach(http);
 
 io.origins('*:*');
 
+console.log('debug');
 console.log(process.version);
 
 io.on('connection', socket => {
