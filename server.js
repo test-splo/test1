@@ -7,6 +7,8 @@ const io = require('socket.io').attach(http);
 
 io.origins('*:*');
 
+console.log(process.version);
+
 io.on('connection', socket => {
   // 送信された文字列をブロードキャストするだけ
   const echoEventName = 'echo';
